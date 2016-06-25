@@ -1,0 +1,11 @@
+relacion_tablados:
+    resource: "@relacionBundle/Resources/config/routing/tablados.yml"
+    prefix:   /tablados
+
+relacion_tablauno:
+    resource: "@relacionBundle/Resources/config/routing/tablauno.yml"
+    prefix:   /tablauno
+
+relacion_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: relacionBundle:Default:index }

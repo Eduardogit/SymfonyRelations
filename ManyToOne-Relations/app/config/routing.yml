@@ -1,0 +1,4 @@
+relacion:
+    resource: "@relacionBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,48 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>TablaDos list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Sitiowebnombre</th>
+                <th>Direccion</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('tablados_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.sitiowebNombre }}</td>
+                <td>{{ entity.direccion }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('tablados_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('tablados_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('tablados_new') }}">
+                Create a new entry
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('tablauno') }}">
+                Ir a tabla uno
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

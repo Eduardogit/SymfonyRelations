@@ -1,0 +1,30 @@
+tablados:
+    path:     /
+    defaults: { _controller: "relacionBundle:TablaDos:index" }
+
+tablados_show:
+    path:     /{id}/show
+    defaults: { _controller: "relacionBundle:TablaDos:show" }
+
+tablados_new:
+    path:     /new
+    defaults: { _controller: "relacionBundle:TablaDos:new" }
+
+tablados_create:
+    path:     /create
+    defaults: { _controller: "relacionBundle:TablaDos:create" }
+    methods:  POST
+
+tablados_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "relacionBundle:TablaDos:edit" }
+
+tablados_update:
+    path:     /{id}/update
+    defaults: { _controller: "relacionBundle:TablaDos:update" }
+    methods:  [POST, PUT]
+
+tablados_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "relacionBundle:TablaDos:delete" }
+    methods:  [POST, DELETE]

@@ -1,0 +1,17 @@
+relacionBundle\Entity\TablaDos:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        sitiowebNombre:
+            type: string
+            length: 255
+        direccion:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

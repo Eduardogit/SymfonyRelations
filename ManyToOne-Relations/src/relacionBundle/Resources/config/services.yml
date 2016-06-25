@@ -1,0 +1,4 @@
+services:
+#    relacion.example:
+#        class: relacionBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

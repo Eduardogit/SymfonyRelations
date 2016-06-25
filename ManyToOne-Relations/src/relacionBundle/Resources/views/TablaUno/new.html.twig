@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>TablaUno creation</h1>
+    <span>sitio</span>
+    <select>
+    {% for item in entity2 %}
+		<option value="{{item.id}}">{{ item.sitiowebNombre }}</option>
+    {% endfor %}
+	</select>
+    {{ form(form) }}
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('tablauno') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

@@ -1,0 +1,32 @@
+relacionBundle\Entity\TablaUno:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: 255
+        apPaterno:
+            type: string
+            length: 255
+        apMaterno:
+            type: string
+            length: 255
+    manyToMany:
+        sitiosweb:
+            targetEntity: TablaDos
+            joinTable:
+              name: tablauno_tablados
+              joinColumns:
+                uno_id:
+                  referencedColumnName: id
+              inverseJoinColumns:
+                dos_id:
+                  referencedColumnName: id
+                  unique: true
+    lifecycleCallbacks: {  }
